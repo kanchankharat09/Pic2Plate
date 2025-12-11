@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from google import genai
 import os
-from gtts import gTTS#( FOR AUDIO)
+from gtts import gTTS
 from io import BytesIO
 from http.client import responses
 load_dotenv()
@@ -19,7 +19,7 @@ client=genai.Client(api_key=api_key)
 
 # creating a funcation 
 # when so in app.py (user uploded) image that will pass in funcation
-# and Selected diet Preference pass in funcation
+# and Selected Cuision Preference pass in funcation
 # and the funcation will return recipe generate  from that
 
 
