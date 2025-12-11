@@ -1,10 +1,9 @@
 from dotenv import load_dotenv
 from google import genai
-load_dotenv
 import os
 from gtts import gTTS#( FOR AUDIO)
 from io import BytesIO
-
+from http.client import responses
 load_dotenv()
 
 
