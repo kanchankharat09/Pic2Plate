@@ -1,8 +1,6 @@
 from dotenv import load_dotenv
 from google import genai
 import os
-from gtts import gTTS
-from io import BytesIO
 from http.client import responses
 load_dotenv()
 
@@ -27,21 +25,17 @@ client=genai.Client(api_key=api_key)
 
     # base prompt
     
-base_prompt=f"""You are a recipe creation AI. You must follow these rules strictly:
+base_prompt=f"""You are a recipe creation AI. You must follow these rules strictly
 
-1.The recipe must be written entirely in the user-selected language,Language.
-- Do not write in anything other than selected by user language.
-- Every part of the output (Recipe Name, Ingredients, Procedure) must only be in user selected language .
-
-2.The recipe must use all ingredients shown in the uploaded images.
+1.The recipe must use all ingredients shown in the uploaded images.
 - If only one image is uploaded, that ingredient is the main ingredient.
 
-3.The recipe must strictly match the Cuisine selected by the user(Cuisine)ONLY.
+2.The recipe must strictly match the Cuisine selected by the user(Cuisine)ONLY.
 -Only generate recipes from the selected Cuisine STRICTLY,with detailed cooking steps
 
-4.The recipe must be realistic and truly belong to the selected Cuisine ONLY.
+3.The recipe must be realistic and truly belong to the selected Cuisine ONLY.
 
-5.Output format exactly like this strictly(in the selected language ONLY):
+4.Output format exactly like this strictly(in the selected language ONLY):
 
 Recipe Name:
 
@@ -49,7 +43,6 @@ Ingredients:
 
 Procedure:
 
-8. Strictly follow:If the selected language is Hindi, write everything in Hindi script.If English, write everything in English.No mixing of languages.
 
     """
 
