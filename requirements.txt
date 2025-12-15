@@ -3,4 +3,3 @@ python-dotenv
 google-genai
 google-generativeai
 Pillow
-gTTS
